@@ -1,0 +1,15 @@
+//creating studentManagement system -> flow
+
+# create proj templ from spring initializer -> download imp dependency
+
+# create the folder structure
+
+# create entity and Enum
+
+# create the embeddable class
+
+# create the attribute converter class
+
+# create the application.properties
+
+# create the CSR

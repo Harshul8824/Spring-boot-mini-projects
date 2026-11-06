@@ -1,4 +1,26 @@
 package in.strikes.studentManagement.converter;
 
-public class BooleanToStringConverter {
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
+
+@Converter
+public class BooleanToStringConverter implements AttributeConverter<Boolean, String> {
+
+    @Override
+    public String convertToDatabaseColumn(Boolean value){
+        if(value == null){
+            return null;
+        }
+
+        return value ? "Y" : "N";
+    }
+
+    @Override
+    public Boolean convertToEntityAttribute(String value){
+        if(value == null){
+            return null;
+        }
+
+        return "Y".equalsIgnoreCase(value);
+    }
 }
